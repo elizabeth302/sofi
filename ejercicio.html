@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Clics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo práctico: Contador de clics</h2>
+  <button id="btnContador">Haz clic aquí</button>
+  <p>Has hecho <span id="contador">0</span> clics.</p>
+
+  <script>
+    // Ejecutar el código solo cuando la página haya cargado completamente
+    document.addEventListener("DOMContentLoaded", function() {
+      let contador = 0;
+      const boton = document.getElementById("btnContador");
+      const texto = document.getElementById("contador");
+
+      // Agregar un "escuchador" de eventos al botón
+      boton.addEventListener("click", function() {
+        contador++;
+        texto.textContent = contador;
+      });
+    });
+  </script>
+
+</body>
+</html>
